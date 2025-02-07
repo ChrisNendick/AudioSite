@@ -5,7 +5,7 @@
         /* Apply Verdana font to body */
         body {
             padding: 5px 10px;
-            background-color: #ffffff;
+            background-color: rgb(255, 255, 255);
             font-family: Verdana, Geneva, sans-serif; /* Set the font to Verdana, with Geneva and sans-serif as fallbacks */
         }
 
@@ -87,6 +87,20 @@
 
         }
 
+        .hr3 {
+        display: block;
+        margin-top: 2em;
+        margin-bottom:  2em;
+        margin-left: 1em;
+        margin-right: 1em;
+        border-width: 1px;
+        color: #267bd1;
+        width: 15%; /* or use any value like px or % */
+        margin-left: auto;
+        margin-right: auto; /* to center it if desired */
+    }
+
+
         /* Hamburger menu styles */
         .menu {
             display: none; /* Hide menu by default */
@@ -148,7 +162,8 @@
         /* Styles for backdrop */
        
         p {
-            margin-bottom: 5%;
+            margin-bottom: 20px;
+            
            
             
 
@@ -193,6 +208,21 @@
            
             
         }
+
+        .paragraph-backdrop {
+            position: relative;
+            border-radius: 8px;
+
+            display: block;
+            background-color: #d1d1d1;
+            padding: 15px;
+            width: 260px; /* Set a fixed width for all paragraphs */
+            word-wrap: break-word;
+            margin: 10px auto; /* This centers the paragraphs and gives them vertical spacing */
+            text-align: left; /* Align text to the left for better readability */
+            outline: 2px solid #a7a7a7;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -220,34 +250,6 @@
 
 
 
-<!-- 
-
-
-<div class="backdrop">
-    <center><h2 >Audio</h2></center>
-    <center><p style="font-size: 13px; margin-bottom: 2%; margin-top: 1%; ">(select type)</p></center>
-    Single button centered above others with the same style 
-   
-    <div class="centered single-button">
-        <button>All</button>
-    </div>
-
-    Button container for the rest of the buttons 
-    <div class="button-container">
-        <button>Comedy</button>
-        <button>Emotional</button>
-        <button>Action</button>
-        <button>Suspense</button>
-        <button>Other</button>
-    </div>
-    <div class="centered" style=" margin-top: 3%; font-size: 15px;">
-        <p >Short audio clips for you to practice animation with!</p>
-    </div>
-</div>
-
-
- -->
-
 
   
     <center><b ><p style="margin-bottom: 30px;" class="update-Backdrop">Updates Every Friday!</p></b></center>
@@ -259,23 +261,31 @@
 
     <hr>
 
-
-
-<!-- Audio Player Section -->
-<div class="centered" style="margin-top: 50px;">
-    <p><b>Listen to Audio:</b></p>
+<div class="centered" style="margin-top: 20px;" >
+    <p> "Not what he Appears "</p>
+    
     <audio controls>
-        <source src="knife-throw-2-88028.mp3" type="audio/mp3">
+        
+        <source src="Audios/notwhatheappears.mp3" type="audio/mp3">
         
     </audio>
+
+    <p class="paragraph-backdrop"><b>Source:</b> The Big Sleep (1946)</p>
 </div>
 
-<div class="centered" style="margin-top: 50px;">
-    <p><b>Listen to Audio:</b></p>
+<hr class="hr3"></hr>
+
+
+<div class="centered" style="margin-top: 20px;" >
+    <p> "Hole in my head"</p>
+    
     <audio controls>
-        <source src="knife-throw-2-88028.mp3" type="audio/mp3">
+        
+        <source src="Audios/holeinmyhead.mp3" type="audio/mp3">
         
     </audio>
+
+    <p class="paragraph-backdrop"><b>Source:</b> The Big Sleep (1946)</p>
 </div>
 
 
