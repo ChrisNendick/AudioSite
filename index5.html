@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Apply Verdana font to body */
+        body {
+            padding: 5px 10px;
+            background-color: rgb(255, 255, 255);
+            font-family: Verdana, Geneva, sans-serif; /* Set the font to Verdana, with Geneva and sans-serif as fallbacks */
+        }
+
+        .centered {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .faint-line {
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.1); /* Light grey color */
+            margin: 20px 0;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px; /* Space between buttons and other content */
+            flex-wrap: wrap; /* Allow buttons to wrap if necessary */
+        }
+
+        .button-container button, .single-button button {
+            padding: 10px 20px;
+            font-size: 13px;
+            border-radius: 12px;
+            border: 2px solid #ff7738;
+            background-color: #ffd900;
+            font-family: Verdana, Geneva, sans-serif;
+            font-weight: 300;
+        }
+
+        .single-button {
+            margin-bottom: 20px; /* Space between the single button and other buttons */
+            
+        }
+
+        .button-container button:hover, .single-button button:hover {
+
+            background-color: #ff7738; 
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h2 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 16px;
+        }
+
+        h3 {
+            margin-bottom: 30px;
+            margin-top: 30px;
+            font-size: 16px;
+        }
+        hr { 
+        display: block;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: 40em;
+        margin-right: 40em;
+        border-width: 1px;
+        color: #267bd1;
+        }
+
+        .hr2 {
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: 2em;
+            margin-right: 2em;
+            border-width: 1px;
+            color: #267bd1;
+
+
+        }
+
+        .hr3 {
+        display: block;
+        margin-top: 2em;
+        margin-bottom:  2em;
+        margin-left: 1em;
+        margin-right: 1em;
+        border-width: 1px;
+        color: #267bd1;
+        width: 15%; /* or use any value like px or % */
+        margin-left: auto;
+        margin-right: auto; /* to center it if desired */
+    }
+
+
+        /* Hamburger menu styles */
+        .menu {
+            display: none; /* Hide menu by default */
+            position: absolute;
+            font-size: 15px;
+            left: 35%;
+            top: 5%;
+            transform: translateX(-50%); /* Adjust to truly center it horizontally */
+            background-color: #ffd900;
+            width: 80x; /* Adjust the width of the menu */
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            border-bottom: 1px solid #ff7738;
+            border-width: 1px;
+            
+        }
+
+        /* Hamburger button styles */
+        .hamburger {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 40px; /* Adjust width for the button */
+            height: 40px; /* Adjust height for the button */
+            background-color: #ffd900;
+            border-style: solid;
+            border-radius: 5px;
+            position: absolute; /* Positioning it outside the document flow */
+            top: 20px; /* Adjust the distance from the top */
+            left: 35%; /* Center the hamburger button horizontally */
+            transform: translateX(-50%); /* Make sure it's perfectly centered */
+            border-color: #ff7738;
+        }
+
+        .hamburger:hover {
+            background-color: #ff7738;
+        }
+
+        .hamburger span {
+            font-size: 30px; /* Larger hamburger icon size */
+        }
+
+        /* Show menu when active */
+        .menu.active {
+            display: block;
+        }
+
+        /* Styles for backdrop */
+       
+        p {
+            margin-bottom: 20px;
+            
+           
+            
+
+        }
+
+        .donation-Backdrop {
+            display: absolute;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            border-radius: 10px;
+            margin: 0 auto; /* Center the backdrop div horizontally */
+            padding: 5px; /* Padding inside the square */
+            width: 610px; /* Set a fixed width for the square */
+            height: 20px; /* Set a fixed height to make it square */
+            background-color:  #d1d1d1; /* Light background color */
+            border: 2px solid #a7a7a7; /* Border color and width */
+            margin-top: 3%;
+            margin-bottom: 3%;
+           
+            
+        }
+
+
+        .update-Backdrop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            border-radius: 10px;
+            margin: 0 auto; /* Center the backdrop div horizontally */
+            padding: 5px; /* Padding inside the square */
+            width: 250px; /* Set a fixed width for the square */
+            height: 40px; /* Set a fixed height to make it square */
+            background-color:  #ffd900; /* Light background color */
+            
+            border: 2px solid #ff7738;
+            margin-top: 1%;
+            margin-bottom: 3%;
+           
+            
+        }
+
+        .paragraph-backdrop {
+            position: relative;
+            border-radius: 8px;
+
+            display: block;
+            background-color: #d1d1d1;
+            padding: 15px;
+            width: 260px; /* Set a fixed width for all paragraphs */
+            word-wrap: break-word;
+            margin: 10px auto; /* This centers the paragraphs and gives them vertical spacing */
+            text-align: left; /* Align text to the left for better readability */
+            outline: 2px solid #a7a7a7;
+            font-size: 14px;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: inherit; /* Keeps the color the same as the normal link */
+        }
+
+        a:hover, a:active {
+            text-decoration: none;
+            color: rgb(255, 136, 0); /* The color you want on hover or active state */
+        }
+
+        a {
+            color: rgb(0, 0, 255); /* Replace with the normal link color of your choice */
+        }
+
+
+      
+    </style>
+</head>
+<body>
+
+  
+
+<!-- Hamburger button, positioned separately -->
+<button class="hamburger" onclick="toggleMenu()">
+    <span>&#9776;</span> <!-- Hamburger icon inside a span -->
+</button>
+
+<!-- Dropdown menu -->
+<ul class="menu" id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutt.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="centered">
+    <img src="iconicon.png" alt="icon">
+    <hr>
+    
+</div>
+
+
+
+
+
+
+  
+    <center><b ><p style="margin-bottom: 30px;" class="update-Backdrop">Updates Every Friday!</p></b></center>
+
+   
+
+    <center><p class="donation-Backdrop" style="font-size: 14px; margin-top: -10px;"> <b style= "color: rgba(0, 0, 0, 0.7);" >🖤</b> Make sure to <b>bookmark</b> this page and <b><a href="https://ko-fi.com/animaudios" target="_blank">buy me a coffee</a></b> to keep the site ad-free</p></center>
+
+    <hr></hr>
+
+<div class="centered" style="margin-top: 20px;" >
+    <p> "At any time..."</p>
+    
+    <audio controls>
+        
+        <source src="Audios/aaaaat-any-time-you-are-conscious-of-a-tingling-sensation-you-may-obtain-immediate-relief-by-screaming.mp3" type="audio/mp3">
+        
+    </audio>
+
+    <p class="paragraph-backdrop"><b>Source:</b>The Tingler (1959)</p>
+</div>
+
+
+
+
+
+<hr class="hr3"></hr>
+
+<div class="centered" style="margin-top: 20px;" >
+    <p> "Don't listen to her..."</p>
+    
+    <audio controls>
+        
+        <source src="Audios/aaaadon't-listen-to-her-nothing-she-gives-away-is-worth-anything-especially-advice.mp3" type="audio/mp3">
+        
+    </audio>
+
+    <p class="paragraph-backdrop"><b>Source:</b>Battle Circus (1953)</p>
+</div>
+
+
+
+
+
+<hr class="hr3"></hr>
+
+<div class="centered" style="margin-top: 20px;" >
+    <p> "Good Advice..."</p>
+    
+    <audio controls>
+        
+        <source src="Audios/aaaagood-advice-if-if-i'd-listened-earlier-i-wouldn't-be-here.mp3" type="audio/mp3">
+        
+    </audio>
+
+    <p class="paragraph-backdrop"><b>Source:</b>Alice in Wonderland (1951)</p>
+</div>
+
+
+<hr class="hr3"></hr>
+
+<div class="centered" style="margin-top: 20px;" >
+    <p> "I drew the duck blue..."</p>
+    
+    <audio controls>
+        
+        <source src="Audios/aaaai-drew-the-duck-blue-because-i've-never-seen-a-blue-duck-before-and-to-be-honest-with-you-i-wanted-to-see-a-blue-duck.mp3" type="audio/mp3">
+        
+    </audio>
+
+    <p class="paragraph-backdrop"><b>Source:</b>Billy Madison (1995)</p>
+</div>
+
+
+<hr class="hr3"></hr>
+
+<div class="centered" style="margin-top: 20px;" >
+    <p> "Maniac is imminent..."</p>
+    
+    <audio controls>
+        
+        <source src="Audios/aaaamaniac-is-imminent-request-advice.mp3" type="audio/mp3">
+        
+    </audio>
+
+    <p class="paragraph-backdrop"><b>Source:</b>Demolition Man (1993)</p>
+</div>
+
+
+
+
+<hr class="hr3"></hr>
+
+<div class="centered" style="margin-top: 20px;" >
+    <p> "No, no Calm down..."</p>
+    
+    <audio controls>
+        
+        <source src="Audios/aaaano-no-calm-down-learn-to-enjoy-losing.mp3" type="audio/mp3">
+        
+    </audio>
+
+    <p class="paragraph-backdrop"><b>Source:</b>Las Vegas (1998)</p>
+</div>
+
+
+
+
+<hr class="hr3"></hr>
+
+<div class="centered" style="margin-top: 20px;" >
+    <p> "Now, fire that thing!..."</p>
+    
+    <audio controls>
+        
+        <source src="Audios/aaaanow-fire-that-thing!-just-let-me-get-outta-the-way-first.mp3" type="audio/mp3">
+        
+    </audio>
+
+    <p class="paragraph-backdrop"><b>Source:</b> Rambo 1 - First Blood (1982)</p>
+</div>
+
+
+
+<hr class="hr3"></hr>
+
+<div class="centered" style="margin-top: 20px;" >
+    <p> "This reproduction..."</p>
+    
+    <audio controls>
+        
+        <source src="Audios/aaaathis-reproduction-it-s-really-excellent-i-saw-the-original-in-paris-at-the-impressionist-museum-no-you-didn-t.mp3" type="audio/mp3">
+        
+    </audio>
+
+    <p class="paragraph-backdrop"><b>Source:</b>the Airwolf (1984)</p>
+</div>
+
+
+
+
+
+
+<hr class="hr3"></hr>
+
+<div class="centered" style="margin-top: 20px;" >
+    <p> "Well, if you can forget..."</p>
+    
+    <audio controls>
+        
+        <source src="Audios/aaaawell-if-you-can-forget-all-the-money-i-owe-you-then-you-ll-definitely-be-my-son-in-law.mp3" type="audio/mp3">
+        
+    </audio>
+
+    <p class="paragraph-backdrop"><b>Source:</b>The Story of Drunken Master (1979)</p>
+</div>
+
+
+
+
+
+<hr class="hr3"></hr>
+
+<div class="centered" style="margin-top: 20px;" >
+    <p> "What are you?..."</p>
+    
+    <audio controls>
+        
+        <source src="Audios/aaaawhat-are-you-a-psychiatrist-no-then-why-don't-you-keep-your-opinions-to-yourself.mp3" type="audio/mp3">
+        
+    </audio>
+
+    <p class="paragraph-backdrop"><b>Source:</b>Ferris Bueller's Day Off (1986)</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr class="hr3"></hr>
+
+<center><b><p>More audios coming soon!</p></b></center>
+
+<hr class="hr3"></hr>
+
+
+
+
+<div class="centered">
+    <p><b>Pages:<b></p>
+    
+    <p>... <a href="index2.html"> 2</a> <a href="index3.html"> 3</a> <a href="index4.html"> 4</a> <a href="index5.html">5</a> ... </p>
+    
+    </div>
+
+
+    
+    
+    
+    
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('active'); // Toggle the 'active' class to show/hide the menu
+        }
+    </script>
+    
+    </body>
+    </html>
+    
