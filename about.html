@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
+    
 <head>
+    
     <style>
+
+        html {
+
+
+        
+            
+        }
+        
         /* Apply Verdana font to body */
         body {
             padding: 5px 10px;
-            background-color: rgb(255, 255, 255);
+            background-color: #ffffff;
             font-family: Verdana, Geneva, sans-serif; /* Set the font to Verdana, with Geneva and sans-serif as fallbacks */
+            text-align: center; /* Center text content */
+            overflow-y: scroll;
+            
+        
+           
+        }
+
+        div {
+
+
+           
         }
 
         .centered {
@@ -40,11 +61,9 @@
 
         .single-button {
             margin-bottom: 20px; /* Space between the single button and other buttons */
-            
         }
 
         .button-container button:hover, .single-button button:hover {
-
             background-color: #ff7738; 
         }
 
@@ -65,14 +84,15 @@
             margin-top: 30px;
             font-size: 16px;
         }
+
         hr { 
-        display: block;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
-        margin-left: 40em;
-        margin-right: 40em;
-        border-width: 1px;
-        color: #267bd1;
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: 40em;
+            margin-right: 40em;
+            border-width: 1px;
+            color: #267bd1;
         }
 
         .hr2 {
@@ -83,23 +103,7 @@
             margin-right: 2em;
             border-width: 1px;
             color: #267bd1;
-
-
         }
-
-        .hr3 {
-        display: block;
-        margin-top: 2em;
-        margin-bottom:  2em;
-        margin-left: 1em;
-        margin-right: 1em;
-        border-width: 1px;
-        color: #267bd1;
-        width: 15%; /* or use any value like px or % */
-        margin-left: auto;
-        margin-right: auto; /* to center it if desired */
-    }
-
 
         /* Hamburger menu styles */
         .menu {
@@ -125,7 +129,6 @@
             padding: 10px;
             border-bottom: 1px solid #ff7738;
             border-width: 1px;
-            
         }
 
         /* Hamburger button styles */
@@ -160,13 +163,8 @@
         }
 
         /* Styles for backdrop */
-       
         p {
-            margin-bottom: 20px;
-            
-           
-            
-
+            margin-bottom: 1%;
         }
 
         .donation-Backdrop {
@@ -174,7 +172,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            
             border-radius: 10px;
             margin: 0 auto; /* Center the backdrop div horizontally */
             padding: 5px; /* Padding inside the square */
@@ -184,17 +181,13 @@
             border: 2px solid #a7a7a7; /* Border color and width */
             margin-top: 3%;
             margin-bottom: 3%;
-           
-            
         }
-
 
         .update-Backdrop {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            
             border-radius: 10px;
             margin: 0 auto; /* Center the backdrop div horizontally */
             padding: 5px; /* Padding inside the square */
@@ -202,26 +195,47 @@
             height: 40px; /* Set a fixed height to make it square */
             background-color:  #ffd900; /* Light background color */
             
-            border: 2px solid #ff7738;
+            border: 2px solid #ff7738; /* Border color and width */
             margin-top: 1%;
             margin-bottom: 3%;
-           
-            
         }
 
+        .text-box-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to top of container */
+            width: 100%;
+        }
+
+        .text-box {
+            position: absolute; /* Removes it from the document flow */
+            top: 50%; /* Centers it vertically */
+            left: 50%; /* Centers it horizontally */
+            transform: translate(-50%, -50%); /* Offsets it by half of its own width and height for perfect centering */
+            width: 570px; /* Fixed width */
+            padding: 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #a7a7a7;
+            border-radius: 10px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            text-align: center; /* Ensures text inside is aligned properly */
+            margin: 20px 0; /* Vertical spacing is maintained */
+        }
+
+        /* New Backdrop Style for Paragraphs */
         .paragraph-backdrop {
             position: relative;
-            border-radius: 8px;
-
             display: block;
             background-color: #d1d1d1;
             padding: 15px;
-            width: 260px; /* Set a fixed width for all paragraphs */
+            border-radius: 8px;
+            border-color: #a7a7a7;
+            
+            width: 600px; /* Set a fixed width for all paragraphs */
             word-wrap: break-word;
             margin: 10px auto; /* This centers the paragraphs and gives them vertical spacing */
             text-align: left; /* Align text to the left for better readability */
-            outline: 2px solid #a7a7a7;
-            font-size: 14px;
         }
 
         a:visited {
@@ -233,18 +247,11 @@
             text-decoration: none;
             color: rgb(255, 136, 0); /* The color you want on hover or active state */
         }
-
-        a {
-            color: rgb(0, 0, 255); /* Replace with the normal link color of your choice */
-        }
-
-
-      
     </style>
 </head>
 <body>
 
-  
+    <title>About - AnimAudios</title>
 
 <!-- Hamburger button, positioned separately -->
 <button class="hamburger" onclick="toggleMenu()">
@@ -254,202 +261,63 @@
 <!-- Dropdown menu -->
 <ul class="menu" id="menu">
     <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
+    <li><a href="aboutt.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
 </ul>
 <div class="centered">
     <img src="iconicon.png" alt="icon">
     <hr>
-    
+</div>
+
+<center><b><p style="margin-bottom: 30px;" class="update-Backdrop">Updates Every Friday!</p></b></center>
+
+<center><p class="donation-Backdrop" style="font-size: 14px; margin-top: -10px;"> <b style="color: rgba(0, 0, 0, 0.7);">🖤</b> Make sure to <b>bookmark</b> this page and <b><a href="https://ko-fi.com/animaudios" target="_blank">buy me a coffee</a></b> to keep the site ad-free</p></center>
+
+<hr>
+
+<!-- Backdrop around paragraphs, stacked vertically -->
+<div >
+    <p>What is the purpose of this site?</p>
+</div>
+<div class="paragraph-backdrop">
+    <p>This website was created to help animators easily find unique audio samples for practicing character animation. I've personally had issues in the past trying to find audio clips to work with and I know many others do too, so I made this site to fix that issue.</p>
+</div>
+
+<div >
+    <p>Is this Safe?</p>
+</div>
+
+<div class="paragraph-backdrop">
+    <p>Yes! This site is completely safe. No malware, viruses, or malicious files.. just MP4s and WAV's. There's also no ads to avoid any disruptions. </p>
+</div>
+
+<div >
+    <p>How do I download audio?</p>
+</div>
+
+<div class="paragraph-backdrop">
+    <p>There should be 3 dots next to the mp3 player on the home page. Click the dots and press download.</p>
+</div>
+
+
+<div>
+    <p>Does this work on Mobile?</p>
+</div>
+
+<div class="paragraph-backdrop">
+    <p>As of now, you can still access the audio player on mobile, but you cannot directly download from it. </p>
 </div>
 
 
 
-
-
-
-  
-    <center><b ><p style="margin-bottom: 30px;" class="update-Backdrop">Updates Every Friday!</p></b></center>
-
-   
-
-    <center><p class="donation-Backdrop" style="font-size: 14px; margin-top: -10px;"> <b style= "color: rgba(0, 0, 0, 0.7);" >🖤</b> Make sure to <b>bookmark</b> this page and <b><a href="https://ko-fi.com/animaudios" target="_blank">buy me a coffee</a></b> to keep the site ad-free</p></center>
-
-    <hr></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "Cold meat"</p>
-    
-    <audio controls>
-        
-        <source src="Audios/oh-as-i-hold-this-cold-meat-i'm-reminded-of-winston-god-rest-his-soul.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>Mr.s Doubtfire (1993)</p>
+<div>
+    <p>How can I support this site?</p>
 </div>
 
 
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "Only when i ceased to breathe..."</p>
-    
-    <audio controls>
-        
-        <source src="Audios/only-when-i-have-ceased-to-breathe-will-i-be-dead.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>Beverly Hills Ninja (1997)</p>
+<div class="paragraph-backdrop">
+    <p>I have a Ko-Fi linked at the top of the page if you wanna donate! Donations will help keep the site ad-free and alive! </p>
 </div>
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "Old life blown away..."</p>
-    
-    <audio controls>
-        
-        <source src="Audios/old-life-blown-away-in-the-blink-of-an-eye-nothing-left-but-all-the-time-in-the-world-to-think-about-it.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>The Shawshank Redemption (1994)</p>
-</div>
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "I Loved it!"</p>
-    
-    <audio controls>
-        
-        <source src="Audios/that-was-the-speech-it-was-dumb!-it-was-obvious!-it-was-pointless!-it-was-short-i-loved-it!.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>The Muppet Christmas Carol (1992)</p>
-</div>
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "Keep our Composure!!!"</p>
-    
-    <audio controls>
-        
-        <source src="Audios/that's-right!-we-can't-have-anyone-freak-out-out-there-okay-we've-got-to-keep-our-composure!-we've-come-too-far-there's-too-much-to-lose!-we've-got-to-just-keep-our-composure!.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b> Old School (2004)</p>
-</div>
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "They send you here for life..."</p>
-    
-    <audio controls>
-        
-        <source src="Audios/they-send-you-here-for-life-that's-exactly-what-they-take-the-part-that-counts-anyway.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>The Shawshank Redemption (1994)</p>
-</div>
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "We got country and western!"</p>
-    
-    <audio controls>
-        
-        <source src="Audios/what-kind-of-music-do-you-usually-have-here-we-got-both-kinds-we-got-country-and-western.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b> The Blues Brothers (1980)</p>
-</div>
-
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "When a man sees his end..."</p>
-    
-    <audio controls>
-        
-        <source src="Audios/when-a-man-sees-his-end-he-wants-to-know-there-was-some-purpose-to-his-life.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b> Gladiator (2000)</p>
-</div>
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "Harness in the good energy"</p>
-    
-    <audio controls>
-        
-        <source src="Audios/yeah-a-lot-of-pressure-you-gotta-rise-above-it-you-gotta-harness-in-the-good-energy-block-out-the-bad-harness-energy-block-bad.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b> Happy Gilmore (1996)</p>
-</div>
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "You got anger, that's good..."</p>
-    
-    <audio controls>
-        
-        <source src="Audios/you-got-anger-that-s-good-you-re-gonna-need-it-son-you-got-aggression-that-s-even-better-you-re-gonna-need-that-too-but-any-2-year-old-child-can-throw-a-fit.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b> Remember the Titans (2000)</p>
-</div>
-
-
-
-
-
-<title>Home (2) - AnimAudios</title>
-
-
-
-
-
-
-
-
-
-
-
-
-<hr class="hr3"></hr>
-
-
-<div class="centered">
-    <p><b>Pages:<b></p>
-    
-    <p><a href="index.html">1</a> <a href="index2.html"> 2</a> <a href="index3.html"> 3</a> <a href="index4.html"> 4</a> ... </p>
-    
-</div>
-
 
 
 <script>
