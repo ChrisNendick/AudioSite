@@ -67,7 +67,8 @@ margin-top: 0.5em;
 margin-bottom: 0.5em;
 margin-left: 40em;
 margin-right: 40em;
-
+border-width: 1px;
+color: #000000;
 }
 
 .hr2 {
