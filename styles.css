@@ -191,6 +191,7 @@ p {
     width: 260px;
     word-wrap: break-word;
     margin: 10px auto;
+    margin-top: 15px;
     text-align: left;
     outline: 2px solid #a7a7a7;
     font-size: 14px;
@@ -209,3 +210,34 @@ a:hover, a:active {
 a {
     color: rgb(0, 0, 0);
 }
+
+.tags {
+    position: relative;
+    border-radius: 8px;
+    display: block;
+    background-color: #e2e2e2;
+    padding: 13px;
+    width: 260px;
+    word-wrap: break-word;
+    margin: 1px auto;
+    text-align: left;
+    outline: 2px solid #c9c9c9;
+    font-size: 13px;
+    color:rgb(104, 104, 104)
+}
+
+.box-container {
+    border: 2px solid #a8a8a8;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px; /* Optional, to make the corners rounded */
+    width: 280px;
+    margin: 25px auto;
+    display: flex; /* Flexbox to center the content */
+    flex-direction: column; /* Stack the children vertically */
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    text-align: center; /* Center text within the div */
+    
+}
+

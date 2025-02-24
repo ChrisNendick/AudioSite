@@ -3,12 +3,8 @@
 <head>
     <style>
         /* Apply Verdana font to body */
-    
-
-      
     </style>
 </head>
-
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WZ10P9V71H"></script>
@@ -16,10 +12,8 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-WZ10P9V71H');
 </script>
-
 
 <link rel="stylesheet" href="styles.css">
 
@@ -27,238 +21,201 @@
 
     <title>Home (3) - AnimAudios</title>
 
-  
+    <!-- Hamburger button, positioned separately -->
+    <button class="hamburger" onclick="toggleMenu()">
+        <span>&#9776;</span> <!-- Hamburger icon inside a span -->
+    </button>
 
-<!-- Hamburger button, positioned separately -->
-<button class="hamburger" onclick="toggleMenu()">
-    <span>&#9776;</span> <!-- Hamburger icon inside a span -->
-</button>
+    <!-- Dropdown menu -->
+    <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="centered">
+        <img src="iconicon.png" alt="icon">
+        <hr>
+    </div>
 
-<!-- Dropdown menu -->
-<ul class="menu" id="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
-<div class="centered">
-    <img src="iconicon.png" alt="icon">
-    <hr>
-    
-</div>
+    <center><b><p style="font-size: 15px; margin-bottom: 10px; margin-top: 10px;" >🎤 Animation Audios for all! 🎧</p></b></center>
 
-
-
-<center><b><p style="font-size: 15px; margin-bottom: 10px; margin-top: 10px;" >🎤 Animation Audios for all! 🎧</p></b></center>
-
-
-  
-    <center><b ><p style="margin-bottom: 30px;" class="update-Backdrop">Updates Every Friday!</p></b></center>
-
-   
+    <center><b><p style="margin-bottom: 30px;" class="update-Backdrop">Updates Every Friday!</p></b></center>
 
     <center><p class="donation-Backdrop" style="font-size: 14px; margin-top: -10px;"> <b style= "color: rgba(0, 0, 0, 0.7);" >🖤</b> Make sure to <b>bookmark</b> this page and <b><a href="https://ko-fi.com/animaudios" target="_blank">buy me a coffee</a></b> to keep the site ad-free</p></center>
 
     <hr></hr>
 
-<div class="centered" style="margin-top: 20px;" >
-    <p> "You see in every job..."</p>
-    
-    <audio controls>
-        
-        <source src="Audios/you-see-in-every-job-that-must-be-done-there-is-an-element-of-fun-you-find-the-fun-and-snap!-the-job's-a-game.mp3" type="audio/mp3">
-        
-    </audio>
+    <!-- First audio section -->
+    <div class="box-container">
+        <div class="centered" style="margin-top: 20px;">
+            <p> "You see in every job..."</p>
+            <audio controls>
+                <source src="Audios/you-see-in-every-job-that-must-be-done-there-is-an-element-of-fun-you-find-the-fun-and-snap!-the-job's-a-game.mp3" type="audio/mp3">
+            </audio>
+            <p class="paragraph-backdrop"><b>Source:</b>Mary Poppins (1964)</p>
+        </div>
+        <div class="centered">
+            <p class="tags"><b style="color: black;">Tags: </b><b> Woman, Fun, Vintage</b></p>
+        </div>
+    </div>
+
+    <hr class="hr3"></hr>
+
+    <!-- Second audio section -->
+    <div class="box-container">
+        <div class="centered" style="margin-top: 20px;">
+            <p> "by the way..."</p>
+            <audio controls>
+                <source src="Audios/aaby-the-way-you-know-when-you're-telling-these-little-stories-here's-a-good-idea-have-a-point-it-makes-it-so-much-more-interesting-for-the-listener.mp3" type="audio/mp3">
+            </audio>
+            <p class="paragraph-backdrop"><b>Source:</b>Planes, Trains & Automobiles (1987)</p>
+        </div>
+        <div class="centered">
+            <p class="tags"><b style="color: black;">Tags: </b><b> Male, Comedy, Sarcastic</b></p>
+        </div>
+    </div>
+
+    <hr class="hr3"></hr>
+
+    <!-- Third audio section -->
+    <div class="box-container">
+        <div class="centered" style="margin-top: 20px;">
+            <p> "Just making chitchat..."</p>
+            <audio controls>
+                <source src="Audios/aadid-you-want-to-talk-about-the-weather-or-were-you-just-making-chitchat-chitchat-okay-see-you-later-bye.mp3" type="audio/mp3">
+            </audio>
+            <p class="paragraph-backdrop"><b>Source:</b>Groundhog Day (1993)</p>
+        </div>
+        <div class="centered">
+            <p class="tags"><b style="color: black;">Tags: </b><b> Male / Female, Flirting, Dialogue</b></p>
+        </div>
+    </div>
+
+    <hr class="hr3"></hr>
+
+    <!-- Fourth audio section -->
+    <div class="box-container">
+        <div class="centered" style="margin-top: 20px;">
+            <p> "He's too tall to talk to"</p>
+            <audio controls>
+                <source src="Audios/aahe's-too-tall-to-talk-to.mp3" type="audio/mp3">
+            </audio>
+            <p class="paragraph-backdrop"><b>Source:</b>When Harry met Sally (1989)</p>
+        </div>
+        <div class="centered">
+            <p class="tags"><b style="color: black;">Tags: </b><b> Male, Dialogue, Insult</b></p>
+        </div>
+    </div>
+
+    <hr class="hr3"></hr>
+
+    <!-- Fifth audio section -->
+    <div class="box-container">
+        <div class="centered" style="margin-top: 20px;">
+            <p> "Nobody talks to me that way!.."</p>
+            <audio controls>
+                <source src="Audios/aahow-dare-you-you-insolent-peasant-nobody-talks-to-me-that-way-nobody!-nobody!.mp3" type="audio/mp3">
+            </audio>
+            <p class="paragraph-backdrop"><b>Source:</b>SpaceBalls (1987)</p>
+        </div>
+        <div class="centered">
+            <p class="tags"><b style="color: black;">Tags: </b><b> Female / Male, Dialogue, Angry</b></p>
+        </div>
+    </div>
+
+    <hr class="hr3"></hr>
+
+    <!-- Sixth audio section -->
+    <div class="box-container">
+        <div class="centered" style="margin-top: 20px;">
+            <p> "It is so nice when..."</p>
+            <audio controls>
+                <source src="Audios/aait-is-so-nice-when-you-can-sit-with-someone-and-not-have-to-talk-hm.mp3" type="audio/mp3">
+            </audio>
+            <p class="paragraph-backdrop"><b>Source:</b>When Harry met Sally (1989)</p>
+        </div>
+        <div class="centered">
+            <p class="tags"><b style="color: black;">Tags: </b><b> Male, Eating</b></p>
+        </div>
+    </div>
+
+    <hr class="hr3"></hr>
+
+    <!-- Seventh audio section -->
+    <div class="box-container">
+        <div class="centered" style="margin-top: 20px;">
+            <p> "Only one thing can defeat you..."</p>
+            <audio controls>
+                <source src="Audios/aaonly-one-thing-can-defeat-you-your-own-fear.mp3" type="audio/mp3">
+            </audio>
+            <p class="paragraph-backdrop"><b>Source:</b>Mortal Kombat (1995)</p>
+        </div>
+        <div class="centered">
+            <p class="tags"><b style="color: black;">Tags: </b><b> Male, Deep, Quiet</b></p>
+        </div>
+    </div>
+
+    <hr class="hr3"></hr>
+
+    <!-- Eighth audio section -->
+    <div class="box-container">
+        <div class="centered" style="margin-top: 20px;">
+            <p> "Only one thing can defeat you..."</p>
+            <audio controls>
+                <source src="Audios/aasee-the-fact-that-you-have-to-say-they're-not-that-bad-means-that-they-are-that-bad.mp3" type="audio/mp3">
+            </audio>
+            <p class="paragraph-backdrop"><b>Source:</b>TED (2012)</p>
+        </div>
+        <div class="centered">
+            <p class="tags"><b style="color: black;">Tags: </b><b> Male, Dialogue, Comedy</b></p>
+        </div>
+    </div>
+
+    <hr class="hr3"></hr>
+
+    <!-- Ninth audio section -->
+    <div class="box-container">
+        <div class="centered" style="margin-top: 20px;">
+            <p> "That Boy, he's my friend"</p>
+            <audio controls>
+                <source src="Audios/aathat-boy-he's-my-friend-he-likes-the-way-i-talk-and-i-like-the-way-he-talks-mm-hm.mp3" type="audio/mp3">
+            </audio>
+            <p class="paragraph-backdrop"><b>Source:</b>Sling Blade (1996)</p>
+        </div>
+        <div class="centered">
+            <p class="tags"><b style="color: black;">Tags: </b><b> Male, Friendship, Elderly(ish)</b></p>
+        </div>
+    </div>
+
+    <hr class="hr3"></hr>
+
+    <!-- Tenth audio section -->
+    <div class="box-container">
+        <div class="centered" style="margin-top: 20px;">
+            <p> "That Boy, he's my friend"</p>
+            <audio controls>
+                <source src="Audios/aatrain-yourself-to-let-go-of-everything-you-fear-to-lose.mp3" type="audio/mp3">
+            </audio>
+            <p class="paragraph-backdrop"><b>Source:</b>Star Wars: Episode III (2005)</p>
+        </div>
+        <div class="centered">
+            <p class="tags"><b style="color: black;">Tags: </b><b> Male, Motivational</b></p>
+        </div>
+    </div>
+
+    <hr class="hr3"></hr>
+
+    <!-- Pagination -->
+    <div class="centered">
+        <p><b>Pages:<b></p>
+        <p><a href="index.html">1</a> <a href="index2.html"> 2</a> <a href="index3.html"> 3</a> <a href="index4.html"> 4</a> ... </p>
+    </div>
 
-    <p class="paragraph-backdrop"><b>Source:</b>Mary Poppins (1964)</p>
-</div>
-
-
-
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "by the way..."</p>
-    
-    <audio controls>
-        
-        <source src="Audios/aaby-the-way-you-know-when-you're-telling-these-little-stories-here's-a-good-idea-have-a-point-it-makes-it-so-much-more-interesting-for-the-listener.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>Planes, Trains & Automobiles (1987)</p>
-</div>
-
-
-
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "Just making chitchat..."</p>
-    
-    <audio controls>
-        
-        <source src="Audios/aadid-you-want-to-talk-about-the-weather-or-were-you-just-making-chitchat-chitchat-okay-see-you-later-bye.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>Groundhog Day (1993)</p>
-</div>
-
-
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "He's too tall to talk to"</p>
-    
-    <audio controls>
-        
-        <source src="Audios/aahe's-too-tall-to-talk-to.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>When Harry met Sally (1989)</p>
-</div>
-
-
-
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "Nobody talks to me that way!.."</p>
-    
-    <audio controls>
-        
-        <source src="Audios/aahow-dare-you-you-insolent-peasant-nobody-talks-to-me-that-way-nobody!-nobody!.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>SpaceBalls (1987)</p>
-</div>
-
-
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "It is so nice when..."</p>
-    
-    <audio controls>
-        
-        <source src="Audios/aait-is-so-nice-when-you-can-sit-with-someone-and-not-have-to-talk-hm.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>When Harry met Sally (1989)</p>
-</div>
-
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "Only one thing can defeat you..."</p>
-    
-    <audio controls>
-        
-        <source src="Audios/aaonly-one-thing-can-defeat-you-your-own-fear.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>Mortal Kombat (1995)</p>
-</div>
-
-
-
-
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "Only one thing can defeat you..."</p>
-    
-    <audio controls>
-        
-        <source src="Audios/aasee-the-fact-that-you-have-to-say-they're-not-that-bad-means-that-they-are-that-bad.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>TED (2012)</p>
-</div>
-
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "That Boy, he's my friend"</p>
-    
-    <audio controls>
-        
-        <source src="Audios/aathat-boy-he's-my-friend-he-likes-the-way-i-talk-and-i-like-the-way-he-talks-mm-hm.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>Sling Blade (1996)</p>
-</div>
-
-
-
-
-<hr class="hr3"></hr>
-
-<div class="centered" style="margin-top: 20px;" >
-    <p> "That Boy, he's my friend"</p>
-    
-    <audio controls>
-        
-        <source src="Audios/aatrain-yourself-to-let-go-of-everything-you-fear-to-lose.mp3" type="audio/mp3">
-        
-    </audio>
-
-    <p class="paragraph-backdrop"><b>Source:</b>Star Wars: Episode III(2005)</p>
-</div>
-
-
-
-
-
-<hr class="hr3"></hr>
-
-
-
-
-
-
-
-
-
-<div class="centered">
-    <p><b>Pages:<b></p>
-    
-    <p><a href="index.html">1</a> <a href="index2.html"> 2</a> <a href="index3.html"> 3</a> <a href="index4.html"> 4</a> ... </p>
-    
-</div>
-    
-    
-    
-    
     <script>
         function toggleMenu() {
             var menu = document.getElementById('menu');
             menu.classList.toggle('active'); // Toggle the 'active' class to show/hide the menu
         }
     </script>
-    
-    </body>
-    </html>
-    
+</body>
+</html>
