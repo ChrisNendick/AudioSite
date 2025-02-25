@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Apply Verdana font to body */
+        body {
+            padding: 5px 10px;
+            background-color: #ffffff;
+            overflow: scroll; 
+            font-family: Verdana, Geneva, sans-serif; /* Set the font to Verdana, with Geneva and sans-serif as fallbacks */
+        }
+
+        .centered {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .faint-line {
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.1); /* Light grey color */
+            margin: 20px 0;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px; /* Space between buttons and other content */
+            flex-wrap: wrap; /* Allow buttons to wrap if necessary */
+        }
+
+        .button-container button, .single-button button {
+            padding: 10px 20px;
+            font-size: 13px;
+            border-radius: 12px;
+            border: 2px solid #ff7738;
+            background-color: #ffd900;
+            font-family: Verdana, Geneva, sans-serif;
+            font-weight: 300;
+        }
+
+        .single-button {
+            margin-bottom: 20px; /* Space between the single button and other buttons */
+            
+        }
+
+        .button-container button:hover, .single-button button:hover {
+
+            background-color: #ff7738; 
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h2 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 16px;
+        }
+
+        h3 {
+            margin-bottom: 30px;
+            margin-top: 30px;
+            font-size: 16px;
+        }
+        hr { 
+        display: block;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: 40em;
+        margin-right: 40em;
+        border-width: 1px;
+        color: #000000;
+        }
+
+        .hr2 {
+            display: block;
+            margin-top: 35px;
+            margin-bottom: 30px;
+            margin-left: 2em;
+            margin-right: 2em;
+            border-width: 1px;
+            width: 400px;
+            color: #000000;
+
+        }
+
+        /* Hamburger menu styles */
+        .menu {
+            display: none; /* Hide menu by default */
+            position: absolute;
+            font-size: 15px;
+            left: 35%;
+            top: 5%;
+            transform: translateX(-50%); /* Adjust to truly center it horizontally */
+            background-color: #ffd900;
+            width: 80x; /* Adjust the width of the menu */
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            border-bottom: 1px solid #ff7738;
+            border-width: 1px;
+        }
+
+        /* Hamburger button styles */
+        .hamburger {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 40px; /* Adjust width for the button */
+            height: 40px; /* Adjust height for the button */
+            background-color: #ffd900;
+            border-style: solid;
+            border-radius: 5px;
+            position: absolute; /* Positioning it outside the document flow */
+            top: 20px; /* Adjust the distance from the top */
+            left: 35%; /* Center the hamburger button horizontally */
+            transform: translateX(-50%); /* Make sure it's perfectly centered */
+            border-color: #ff7738;
+        }
+
+        .hamburger:hover {
+            background-color: #ff7738;
+        }
+
+        .hamburger span {
+            font-size: 30px; /* Larger hamburger icon size */
+        }
+
+        /* Show menu when active */
+        .menu.active {
+            display: block;
+        }
+
+        /* Styles for backdrop */
+        .backdrop {
+            width: 600px; /* Set a fixed width for the square */
+            height: 200px; /* Set a fixed height to make it square */
+            background-color:  #e9e9e9; /* Light background color */
+            border: 1px solid #a7a7a7; /* Border color and width */
+            display: absolute;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50%;
+            border-radius: 10px;
+            margin: 0 auto; /* Center the backdrop div horizontally */
+            padding: 5px; /* Padding inside the square */
+        }
+
+      
+        .donation-Backdrop {
+            display: absolute;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            margin: 0 auto; /* Center the backdrop div horizontally */
+            padding: 5px; /* Padding inside the square */
+            width: 600px; /* Set a fixed width for the square */
+            height: 20px; /* Set a fixed height to make it square */
+            background-color:  #ffd900; /* Light background color */
+            
+            border: 2px solid #ff7738;
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+
+        /* New Box for text wrapping */
+        .text-box {
+            width: 570px; /* Width of the box */
+            height: auto; /* Adjust height based on content */
+            padding: 20px;
+            background-color: #f4f4f4; /* Light grey background */
+            border: 1px solid #a7a7a7; /* Border for the box */
+            border-radius: 10px; /* Rounded corners */
+            word-wrap: break-word; /* Allow text to wrap inside the box */
+            overflow-wrap: break-word; /* Forcing text to wrap */
+            margin: 20px auto; /* Center the box horizontally */
+        }
+
+
+        .imagecenter {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        }
+
+        
+        a {
+            color: rgb(0, 0, 0); /* Replace with the normal link color of your choice */
+        }
+        .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #000000;
+        background-color: #ffd900;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #000000;
+        margin-top: 20px;
+        }
+
+        .button:hover {background-color: #ffe54f}
+
+        .button:active {
+        background-color: #ffaf38;
+        box-shadow: 0 5px #000000;
+        transform: translateY(4px);
+        }
+
+        
+        .generator-Backdrop {
+            width: 600px; /* Set a fixed width for the square */
+            height: 200px; /* Set a fixed height to make it square */
+            background-color:  #fff3bf; /* Light background color */
+            border: 4px solid #ffaf38; /* Border color and width */
+            display: absolute;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            border-radius: 10px;
+            margin: 0 auto; /* Center the backdrop div horizontally */
+            margin-top: 30px;
+            padding: 5px; /* Padding inside the square */
+        }
+    
+
+      
+
+      
+
+
+    </style>
+</head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZ10P9V71H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WZ10P9V71H');
+</script>
+
+<link rel="stylesheet" href="styles.css">
+
+<body>
+
+    <title>Contact - AnimAudios</title>
+<!-- Hamburger button, positioned separately -->
+<button class="hamburger" onclick="toggleMenu()">
+    <span>&#9776;</span> <!-- Hamburger icon inside a span -->
+</button>
+
+
+
+
+<ul class="menu" id="menu">
+    <li><a href="index.html">Home</a></li>
+
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="prompts.html">Prompts</a></li>
+</ul>
+
+
+<div class="centered">
+    <img src="iconicon.png" alt="icon">
+    <hr>
+    <div class="generator-Backdrop">
+    <b><p style="font-size: 20px; color: rgb(0, 0, 0);">Animation Prompt Generator!<p></b>
+      
+      
+
+
+
+    <div class="prompt">
+        <div id="prompt" style="font-size: 15px">"Generate a Prompt!"</div>
+        <button onclick="generateQuote()" class="button"><b>Get Prompt</b></button>
+      </div>
+
+      </div>
+    
+      <script>
+        const quotes = [
+          {
+            text: "Animate An Elf pulling out a sword at a 3 quarters angle",
+            
+          },
+          {
+            text: "Animate a Woman trying to skate on ice that's just a little too slippery",
+            
+          },
+          {
+            text: "Animate a Kid who does Karate kicking down the Piñata at a birthday party",
+           
+          },
+       
+          {
+            text: "Animate me getting rid of John's remains in the New York subway at 10:33 PM on November 16th.",
+           
+          },
+          {
+            text: "Animate... Larry.",
+            
+          },
+    
+          {
+            text: "Animate someone drinking soap and then burping bubbles",
+            
+          },
+          {
+            text: "Animate a seal flopping around",
+            
+          },
+          {
+            text: "Animate someone doing a kick-flip from a low angle and then landing on the camera.",
+            
+          },
+          {
+            text: "Animate a man taking a picture of someone who's afraid of the flash",
+            
+          },
+          {
+            text: "Animate someone falling on a treadmill",
+            
+          },
+          {
+            text: "Animate a dog playing fetch with itself",
+            
+          },
+          {
+            text: "Animate someone flipping a bowl of soup onto their head",
+            
+          },
+          {
+            text: "Animate someone dodging an axe that was thrown at them",
+            
+          },
+          {
+            text: "Animate the eyes of someone who's given up in life",
+            
+          },
+          {
+            text: "Animate someone flipping their pancakes in a frying pan",
+            
+          },
+          {
+            text: "Animate an old southern man clenching his shotgun",
+            
+          },
+          {
+            text: "Animate a nervous guy backstage who's about to give a speech",
+            
+          },
+          {
+            text: "Animate a Viking eating chicken off the bone",
+            
+          },
+          {
+            text: "Animate a detective putting out his cigar on the forehead of his assistant",
+            
+          },
+          {
+            text: "Animate someone falling from the sky from the grounds perspective",
+            
+          },
+          {
+            text: "Animate an angry woman slamming a door shut.",
+          },
+          {
+            text: "Animate a body builder petting a kitten",
+          },
+          {
+            text: "Animate a scientist observing his malfunctioning robot.",
+          },
+        ];
+    
+        function generateQuote() {
+          const randomIndex = Math.floor(Math.random() * quotes.length);
+          const selectedQuote = quotes[randomIndex];
+          document.getElementById("prompt").textContent = `"${selectedQuote.text}"`;
+        }
+
+        
+        function toggleMenu() {
+        var menu = document.getElementById('menu');
+        menu.classList.toggle('active'); 
+    }
+      </script>
+
+    
+     
+
+
+ 
+
+
+</body>
+</html>
