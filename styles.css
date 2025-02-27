@@ -263,6 +263,7 @@ a {
     min-width: 60px; /* This allows the button to expand if the text is longer */
     white-space: nowrap; /* Prevents the text from wrapping to a new line */
     padding: 5px 10px; /* Adjust padding for better appearance */
+    border-radius: 4px;
     
 }
 
