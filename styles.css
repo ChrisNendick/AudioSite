@@ -243,3 +243,59 @@ a {
     
 }
 
+.button-container2 {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 4px; 
+    justify-content: center;
+}
+
+.filter-button {
+    background-color: #ffd900;
+    border: 2px solid rgb(255, 136, 0);
+    color: rgb(0, 0, 0);
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 2px 2px;
+    min-width: 60px; /* This allows the button to expand if the text is longer */
+    white-space: nowrap; /* Prevents the text from wrapping to a new line */
+    padding: 5px 10px; /* Adjust padding for better appearance */
+    
+}
+
+.filter-button:hover {
+    background-color: rgb(255, 136, 0);
+    border: 2px solid rgb(255, 136, 0);
+    color: rgb(0, 0, 0);
+}
+
+
+.button-container3 {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 4px; 
+    justify-content: center;
+}
+
+.filter-button-backdrop {
+    display: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 5px;
+    width: 500px;
+    height: 150px;
+    background-color: #f9f9f9;
+    border: 2px solid #a8a8a8;
+    margin-top: 1%;
+    margin-bottom: 1.3%;
+    
+
+}
+
+
