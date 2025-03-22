@@ -36,11 +36,11 @@
     </ul>
 
     <div class="centered">
-        <img src="iconicon.png" alt="icon">
+        <img  id="top-image" src="iconicon.png" alt="icon">
         <hr>
     </div>
 
-    <center><b><p style="font-size: 15px; margin-bottom: 10px; margin-top: 10px;" >🎤 Animation Audios for all! 🎧</p></b></center>
+    <center><b><p style="font-size: 15px; margin-bottom: 10px; margin-top: 10px;" class="animation-title" >🎤 Animation Audios for all! 🎧</p></b></center>
 
     <center><b><p style="margin-bottom: 30px;" class="update-Backdrop">New Audio Every Friday!</p></b></center>
 
@@ -48,9 +48,12 @@
 
     <hr style="margin-top: 1%;">
 
+    <img src="moon.png" id="mode-toggle" alt="Button Image" style="width: 60px; height: 60px;" class="switchIcon">
+
+
        
     <div class="filter-button-backdrop">
-        <center><p style="margin-bottom: 9px;"><b>Category:</b> Angry</p></center>
+        <center><p style="margin-bottom: 9px;" class="tag-title"><b>Category:</b> Angry</p></center>
         <hr class="hr3" style="margin-top: 5px; margin-bottom: 8px; width: 400px; color: black;"></hr>
         <div class="button-container2">
         <center><button class="filter-button" onclick="window.location.href='index.html';">All</button></center>
@@ -78,7 +81,7 @@
     <!-- Fifth audio section -->
     <div class="box-container">
         <div class="centered" style="margin-top: 20px;">
-            <p> "Nobody talks to me that way!.."</p>
+            <p class="box-title"> "Nobody talks to me that way!.."</p>
             <audio controls>
                 <source src="Audios/aahow-dare-you-you-insolent-peasant-nobody-talks-to-me-that-way-nobody!-nobody!.mp3" type="audio/mp3">
             </audio>
@@ -94,7 +97,7 @@
     <!-- Seventh audio section -->
     <div class="box-container">
         <div class="centered" style="margin-top: 20px;">
-            <p> "What do you need..."</p>
+            <p class="box-title"> "What do you need..."</p>
             <audio controls>
                 <source src="Audios/aaawhat-do-you-need-a-father-figure-stop-pulling-your-sister-s-hair.mp3" type="audio/mp3">
             </audio>
@@ -110,7 +113,7 @@
     <!-- Tenth audio section -->
     <div class="box-container">
         <div class="centered" style="margin-top: 20px;">
-            <p> "What are you?..."</p>
+            <p class="box-title"> "What are you?..."</p>
             <audio controls>
                 <source src="Audios/aaaawhat-are-you-a-psychiatrist-no-then-why-don't-you-keep-your-opinions-to-yourself.mp3" type="audio/mp3">
             </audio>
@@ -128,7 +131,7 @@
     <div class="box-container">
         <!-- "Love is not an art to us..." Audio -->
         <div class="centered" style="margin-top: 20px;">
-            <p>"Those Ingrates."</p>
+            <p class="box-title">"Those Ingrates."</p>
             <audio controls>
                 <source src="Audios-2/our-people-i-have-no-feelings-for-those-ingrates.mp3" type="audio/mp3">
             </audio>
@@ -148,7 +151,7 @@
 
 <hr class="hr3"></hr>
 
-<div class="centered">
+<div class="pages">
     <p><b>Pages:<b></p>
     
     <p><a href="angry.html">1</a> </p>
@@ -156,7 +159,7 @@
 </div>
 
 
-
+<script src="function.js"></script>
     <script>
         function toggleMenu() {
             var menu = document.getElementById('menu');

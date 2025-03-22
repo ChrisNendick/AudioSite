@@ -7,7 +7,7 @@
         body {
             padding: 5px 10px;
             background-color: #ffffff;
-            overflow: scroll; 
+            
             font-family: Verdana, Geneva, sans-serif; /* Set the font to Verdana, with Geneva and sans-serif as fallbacks */
         }
 
@@ -255,6 +255,7 @@
     </style>
 </head>
 
+<link rel="stylesheet" href="styles.css">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WZ10P9V71H"></script>
@@ -287,9 +288,12 @@
     <li><a href="prompts.html">Prompts</a></li>
 </ul>
 
+<img src="moon.png" id="mode-toggle" alt="Button Image" style="width: 60px; height: 60px;" class="switchIcon">
+
+
 
 <div class="centered">
-    <img src="iconicon.png" alt="icon">
+    <img id="top-image" src="iconicon.png" alt="icon">
     <hr>
     <div class="generator-Backdrop">
     <b><p style="font-size: 20px; color: rgb(0, 0, 0);">Animation Prompt Generator!<p></b>
@@ -415,7 +419,7 @@
       </script>
 
     
-     
+  <script src="function.js"></script>
 
 
  

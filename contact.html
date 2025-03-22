@@ -7,7 +7,7 @@
         body {
             padding: 5px 10px;
             background-color: #ffffff;
-            overflow: scroll; 
+            overflow: none; 
             font-family: Verdana, Geneva, sans-serif; /* Set the font to Verdana, with Geneva and sans-serif as fallbacks */
         }
 
@@ -226,6 +226,7 @@
   gtag('config', 'G-WZ10P9V71H');
 </script>
 
+<link rel="stylesheet" href="styles.css">
 
 
 <body>
@@ -246,16 +247,19 @@
     <li><a href="prompts.html">Prompts</a></li>
 </ul>
 
+<img src="moon.png" id="mode-toggle" alt="Button Image" style="width: 60px; height: 60px;" class="switchIcon">
+
+
 <div class="centered">
-    <img src="iconicon.png" alt="icon">
+    <img id = "top-image" src="iconicon.png" alt="icon">
     <hr>
-    <b><p>✉️ Contact ✉️</p></b>
-    <p>Use <a href="https://docs.google.com/forms/d/e/1FAIpQLSfeoTXKxB8Or7fieJRbSXPo4jfvKKsNheb3UinHF5TviYwmLw/viewform?usp=header" target="_blank">this</a> form to contact me and make suggestions</p>
+    <b><p  class="tag-title">✉️ Contact ✉️</p></b>
+    <p  class="tag-title">Use <a href="https://docs.google.com/forms/d/e/1FAIpQLSfeoTXKxB8Or7fieJRbSXPo4jfvKKsNheb3UinHF5TviYwmLw/viewform?usp=header" target="_blank" >this</a> form to contact me and make suggestions</p>
 
    <center> <hr class="hr2"></center>
 <div>
-    <b ><p>🎵 Audio Requests 🎵</p></b>
-    <p >Use <a href="https://forms.gle/oSDcSYcHdjt4RdsGA" target="_blank" >this</a> form to make audio requests!</p>
+    <b ><p  class="tag-title">🎵 Audio Requests 🎵</p></b>
+    <p  class="tag-title">Use <a href="https://forms.gle/oSDcSYcHdjt4RdsGA" target="_blank" >this</a> form to make audio requests!</p>
 </div>
 </div>
 
@@ -265,6 +269,7 @@
 <img src="catmaill2.png" alt="catmail" style="width:300px;height:300px;" class="imagecenter">
 
 
+<script src="function.js"></script>
 
 <script>
     function toggleMenu() {

@@ -36,11 +36,11 @@
     </ul>
 
     <div class="centered">
-        <img src="iconicon.png" alt="icon">
+        <img  id="top-image" src="iconicon.png" alt="icon">
         <hr>
     </div>
 
-    <center><b><p style="font-size: 15px; margin-bottom: 10px; margin-top: 10px;" >🎤 Animation Audios for all! 🎧</p></b></center>
+    <center><b><p style="font-size: 15px; margin-bottom: 10px; margin-top: 10px;" class="animation-title">🎤 Animation Audios for all! 🎧</p></b></center>
 
     <center><b><p style="margin-bottom: 30px;" class="update-Backdrop">New Audio Every Friday!</p></b></center>
 
@@ -48,9 +48,12 @@
 
     <hr style="margin-top: 1%;">
 
+    <img src="moon.png" id="mode-toggle" alt="Button Image" style="width: 60px; height: 60px;" class="switchIcon">
+
+
        
     <div class="filter-button-backdrop">
-        <center><p style="margin-bottom: 9px;"><b>Category:</b> Female</p></center>
+        <center><p style="margin-bottom: 9px;" class="tag-title"><b>Category:</b> Female</p></center>
         <hr class="hr3" style="margin-top: 5px; margin-bottom: 8px; width: 400px; color: black;"></hr>
         <div class="button-container2">
         <center><button class="filter-button" onclick="window.location.href='index.html';">All</button></center>
@@ -77,7 +80,7 @@
     <div class="box-container">
         <!-- "Hole in my head" Audio -->
         <div class="centered" style="margin-top: 20px;">
-            <p>"Hole in my head"</p>
+            <p class="box-title">"Hole in my head"</p>
             <audio controls>
                 <source src="Audios/holeinmyhead.mp3" type="audio/mp3">
             </audio>
@@ -94,7 +97,7 @@
     <div class="box-container">
         <!-- "Love is not an art to us..." Audio -->
         <div class="centered" style="margin-top: 20px;">
-            <p>"Love is not an art to us..."</p>
+            <p class="box-title">"Love is not an art to us..."</p>
             <audio controls>
                 <source src="Audios/love-is-not-an-art-to-us-it-s-life-to-us.mp3" type="audio/mp3">
             </audio>
@@ -113,7 +116,7 @@
 
     <!-- "Cold meat" Audio -->
     <div class="centered" style="margin-top: 20px;">
-        <p> "Cold meat"</p>
+        <p class="box-title"> "Cold meat"</p>
         <audio controls>
             <source src="Audios/oh-as-i-hold-this-cold-meat-i'm-reminded-of-winston-god-rest-his-soul.mp3" type="audio/mp3">
         </audio>
@@ -132,7 +135,7 @@
     <!-- First audio section -->
     <div class="box-container">
         <div class="centered" style="margin-top: 20px;">
-            <p> "You see in every job..."</p>
+            <p class="box-title"> "You see in every job..."</p>
             <audio controls>
                 <source src="Audios/you-see-in-every-job-that-must-be-done-there-is-an-element-of-fun-you-find-the-fun-and-snap!-the-job's-a-game.mp3" type="audio/mp3">
             </audio>
@@ -149,7 +152,7 @@
     <!-- Third audio section -->
     <div class="box-container">
         <div class="centered" style="margin-top: 20px;">
-            <p> "Better look first..."</p>
+            <p class="box-title"> "Better look first..."</p>
             <audio controls>
                 <source src="Audios/aaabetter-look-first-for-if-one-drinks-much-from-a-bottle-marked-poison-it's-almost-certain-to-disagree-with-one-sooner-or-later.mp3" type="audio/mp3">
             </audio>
@@ -166,7 +169,7 @@
     <!-- Fourth audio section -->
     <div class="box-container">
         <div class="centered" style="margin-top: 20px;">
-            <p> "If I were my father..."</p>
+            <p class="box-title"> "If I were my father..."</p>
             <audio controls>
                 <source src="Audios/aaaif-i-were-my-father-i-d-have-you-tortured.mp3" type="audio/mp3">
             </audio>
@@ -183,7 +186,7 @@
     <!-- Tenth audio section -->
     <div class="box-container">
         <div class="centered" style="margin-top: 20px;">
-            <p> "Your father..."</p>
+            <p class="box-title"> "Your father..."</p>
             <audio controls>
                 <source src="Audios/aaayour-father-well-he's-something-very-ancient-we've-never-seen-here-before.mp3" type="audio/mp3">
             </audio>
@@ -201,7 +204,7 @@
     <!-- Second audio section -->
     <div class="box-container">
         <div class="centered" style="margin-top: 20px;">
-            <p> "Don't listen to her..."</p>
+            <p class="box-title"> "Don't listen to her..."</p>
             <audio controls>
                 <source src="Audios/aaaadon't-listen-to-her-nothing-she-gives-away-is-worth-anything-especially-advice.mp3" type="audio/mp3">
             </audio>
@@ -218,7 +221,7 @@
     <!-- Third audio section -->
     <div class="box-container">
         <div class="centered" style="margin-top: 20px;">
-            <p> "Good Advice..."</p>
+            <p class="box-title"> "Good Advice..."</p>
             <audio controls>
                 <source src="Audios/aaaagood-advice-if-if-i'd-listened-earlier-i-wouldn't-be-here.mp3" type="audio/mp3">
             </audio>
@@ -237,7 +240,7 @@
 
 <hr class="hr3"></hr>
 
-<div class="centered">
+<div class="pages">
     <p><b>Pages:<b></p>
     
     <p><a href="female.html">1</a> <a href="female2.html"> 2</a> </p>
@@ -245,7 +248,7 @@
 </div>
 
 
-
+<script src="function.js"></script>
     <script>
         function toggleMenu() {
             var menu = document.getElementById('menu');

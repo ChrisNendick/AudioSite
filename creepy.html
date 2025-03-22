@@ -36,21 +36,23 @@
     </ul>
 
     <div class="centered">
-        <img src="iconicon.png" alt="icon">
+        <img  id="top-image" src="iconicon.png" alt="icon">
         <hr>
     </div>
 
-    <center><b><p style="font-size: 15px; margin-bottom: 10px; margin-top: 10px;" >🎤 Animation Audios for all! 🎧</p></b></center>
+    <center><b><p style="font-size: 15px; margin-bottom: 10px; margin-top: 10px;" class="animation-title" >🎤 Animation Audios for all! 🎧</p></b></center>
 
     <center><b><p style="margin-bottom: 30px;" class="update-Backdrop">New Audio Every Friday!</p></b></center>
 
     <center><p class="donation-Backdrop" style="font-size: 14px; margin-top: -10px;"> <b style= "color: rgba(0, 0, 0, 0.7);" >🖤</b> Make sure to <b>bookmark</b> this page and <b><a href="https://ko-fi.com/animaudios" target="_blank">buy me a coffee</a></b> to keep the site ad-free</p></center>
 
     <hr style="margin-top: 1%;">
+    <img src="moon.png" id="mode-toggle" alt="Button Image" style="width: 60px; height: 60px;" class="switchIcon">
+
 
        
     <div class="filter-button-backdrop">
-        <center><p style="margin-bottom: 9px;"><b>Category:</b> Creepy</p></center>
+        <center><p style="margin-bottom: 9px;" class="tag-title"><b>Category:</b> Creepy</p></center>
         <hr class="hr3" style="margin-top: 5px; margin-bottom: 8px; width: 400px; color: black;"></hr>
         <div class="button-container2">
         <center><button class="filter-button" onclick="window.location.href='index.html';">All</button></center>
@@ -78,7 +80,7 @@
     <div class="box-container">
         <!-- "Hole in my head" Audio -->
         <div class="centered" style="margin-top: 20px;">
-            <p>"Hole in my head"</p>
+            <p class="box-title">"Hole in my head"</p>
             <audio controls>
                 <source src="Audios/holeinmyhead.mp3" type="audio/mp3">
             </audio>
@@ -97,7 +99,7 @@
     <!-- Ninth audio section -->
     <div class="box-container">
         <div class="centered" style="margin-top: 20px;">
-            <p> "Well, if you can forget..."</p>
+            <p class="box-title"> "Well, if you can forget..."</p>
             <audio controls>
                 <source src="Audios/aaaawell-if-you-can-forget-all-the-money-i-owe-you-then-you-ll-definitely-be-my-son-in-law.mp3" type="audio/mp3">
             </audio>
@@ -113,7 +115,7 @@
 
 <hr class="hr3"></hr>
 
-<div class="centered">
+<div class="pages">
     <p><b>Pages:<b></p>
     
     <p><a href="creepy.html">1</a> </p>
@@ -121,7 +123,7 @@
 </div>
 
 
-
+<script src="function.js"></script>
     <script>
         function toggleMenu() {
             var menu = document.getElementById('menu');

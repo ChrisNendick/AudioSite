@@ -4,6 +4,11 @@
     <link rel="icon" href="animaudioPFP-modified.png">
     <style>
         /* Apply Verdana font to body */
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+   
     </style>
 </head>
 
@@ -36,11 +41,11 @@
     </ul>
 
     <div class="centered">
-        <img src="iconicon.png" alt="icon">
+        <img  id="top-image" src="iconicon.png" alt="icon">
         <hr>
     </div>
 
-    <center><b><p style="font-size: 15px; margin-bottom: 10px; margin-top: 10px;" >🎤 Animation Audios for all! 🎧</p></b></center>
+    <center><b><p style="font-size: 15px; margin-bottom: 10px; margin-top: 10px;" class="animation-title" >🎤 Animation Audios for all! 🎧</p></b></center>
 
     <center><b><p style="margin-bottom: 30px;" class="update-Backdrop">New Audio Every Friday!</p></b></center>
 
@@ -48,9 +53,12 @@
 
     <hr style="margin-top: 1%;">
 
-   
+    <img src="moon.png" id="mode-toggle" alt="Button Image" style="width: 60px; height: 60px;" class="switchIcon">
+
+
+
     <div class="filter-button-backdrop">
-        <center><p style="margin-bottom: 9px;"><b>Category:</b> Male</p></center>
+        <center><p style="margin-bottom: 9px;" class="tag-title"><b>Category:</b> Male</p></center>
         <hr class="hr3" style="margin-top: 5px; margin-bottom: 8px; width: 400px; color: black;"></hr>
         <div class="button-container2">
         <center><button class="filter-button" onclick="window.location.href='index.html';">All</button></center>
@@ -73,10 +81,9 @@
     <hr class="hr3"></hr>
 
     <div class="box-container">
-
         <!-- "Not what he Appears" Audio -->
         <div class="centered">
-            <p>"Not what he Appears"</p>
+            <p class="box-title">"Not what he Appears"</p> <!-- Title with box-title class -->
             <audio controls>
                 <source src="Audios/notwhatappears.mp3" type="audio/mp3">
             </audio>
@@ -88,16 +95,12 @@
         </div>
     </div>
 
-
     <hr class="hr3"></hr>
-
-
-
 
     <div class="box-container">
         <!-- "Now you wanna leave" Audio -->
         <div class="centered" style="margin-top: 20px;">
-            <p>"Now you wanna leave"</p>
+            <p class="box-title">"Now you wanna leave"</p> <!-- Title with box-title class -->
             <audio controls>
                 <source src="Audios/enock.mp3" type="audio/mp3">
             </audio>
@@ -114,7 +117,7 @@
     <div class="box-container">
         <!-- "What's he got to hope for now?" Audio -->
         <div class="centered" style="margin-top: 20px;">
-            <p>"What's he got to hope for now?"</p>
+            <p class="box-title">"What's he got to hope for now?"</p> <!-- Title with box-title class -->
             <audio controls>
                 <source src="Audios/got2hopefor.mp3" type="audio/mp3">
             </audio>
@@ -131,7 +134,7 @@
     <div class="box-container">
         <!-- "Ever since I joined Office" Audio -->
         <div class="centered" style="margin-top: 20px;">
-            <p>"Ever since I joined Office"</p>
+            <p class="box-title">"Ever since I joined Office"</p> <!-- Title with box-title class -->
             <audio controls>
                 <source src="Audios/office.mp3" type="audio/mp3">
             </audio>
@@ -148,7 +151,7 @@
     <div class="box-container">
         <!-- "i didn't come all this way..." Audio -->
         <div class="centered" style="margin-top: 20px;">
-            <p>"i didn't come all this way..."</p>
+            <p class="box-title">"i didn't come all this way..."</p> <!-- Title with box-title class -->
             <audio controls>
                 <source src="Audios/i-didn't-come-all-this-way-to-get-my-butt-whipped-as-a-matter-of-fact-now-that-i'm-here-i-thought-i'd-do-a-little-whipping-of-my-own.mp3" type="audio/mp3">
             </audio>
@@ -160,112 +163,19 @@
         </div>
     </div>
 
-    
+    <!-- Repeat for other box containers -->
 
     <hr class="hr3"></hr>
 
-    <div class="box-container">
-        <!-- "No sir, I've quit drinking..." Audio -->
-        <div class="centered" style="margin-top: 20px;">
-            <p>"No sir, I've quit drinking..."</p>
-            <audio controls>
-                <source src="Audios/no-sir-i've-quit-drinking-you've-seen-the-error-of-your-ways-no-i-just-can't-afford-it.mp3" type="audio/mp3">
-            </audio>
-            <p class="paragraph-backdrop"><b>Source:</b> A League of Their Own (1992)</p>
-        </div>
-
-        <div class="centered">
-            <p class="tags"><b style="color: black;">Tags: </b><b>Male, Comedy, Dialogue </b></p>
-        </div>
-    </div>
-
-    <hr class="hr3"></hr>
-
-    <div class="box-container">
-        <!-- "You're gonna have to go through hell..." Audio -->
-        <div class="centered" style="margin-top: 20px;">
-            <p>"You're gonna have to go through hell..."</p>
-            <audio controls>
-                <source src="Audios/now-you're-gonna-have-to-go-through-hell-worse-than-any-nightmare-that-you-ever-dreamed-but-in-the-end-i-know-you'll-be-the-one-standing.mp3" type="audio/mp3">
-            </audio>
-            <p class="paragraph-backdrop"><b>Source:</b> Rocky IV (1985)</p>
-        </div>
-
-        <div class="centered">
-            <p class="tags"><b style="color: black;">Tags: </b><b> Male, Motivational, Quiet</b></p>
-        </div>
+    <div class="pages">
+        <p><b>Pages:<b></p>
+        
+        <p><a href="male.html">1</a> <a href="male2.html"> 2</a> <a href="male3.html"> 3</a> <a href="male4.html"> 4</a></p>
+        
     </div>
 
 
-    <hr class="hr3"></hr>
-
-    <div class="box-container">
-
-        <!-- "Only when i ceased to breathe..." Audio -->
-        <div class="centered" style="margin-top: 20px;">
-            <p> "Only when i ceased to breathe..."</p>
-            <audio controls>
-                <source src="Audios/only-when-i-have-ceased-to-breathe-will-i-be-dead.mp3" type="audio/mp3">
-            </audio>
-            <p class="paragraph-backdrop"><b>Source:</b> Beverly Hills Ninja (1997)</p>
-        </div>
-    
-        <div class="centered">
-            <p class="tags"><b style="color: black;">Tags: </b><b> Male, Serious, Powerful</b></p>
-        </div>
-    </div>
-
-
-    <hr class="hr3"></hr>
-
-    
-    <div class="box-container">
-
-        <!-- "Old life blown away..." Audio -->
-        <div class="centered" style="margin-top: 20px;">
-            <p> "Old life blown away..."</p>
-            <audio controls>
-                <source src="Audios/old-life-blown-away-in-the-blink-of-an-eye-nothing-left-but-all-the-time-in-the-world-to-think-about-it.mp3" type="audio/mp3">
-            </audio>
-            <p class="paragraph-backdrop"><b>Source:</b> The Shawshank Redemption (1994)</p>
-        </div>
-
-    <div class="centered">
-        <p class="tags"><b style="color: black;">Tags: </b><b> Male, Drama, Sad</b></p>
-    </div>
-</div>
-
-<div class="box-container">
-
-    <!-- "I Loved it!" Audio -->
-    <div class="centered" style="margin-top: 20px;">
-        <p> "I Loved it!"</p>
-        <audio controls>
-            <source src="Audios/that-was-the-speech-it-was-dumb!-it-was-obvious!-it-was-pointless!-it-was-short-i-loved-it!.mp3" type="audio/mp3">
-        </audio>
-        <p class="paragraph-backdrop"><b>Source:</b> The Muppet Christmas Carol (1992)</p>
-    </div>
-
-    <div class="centered">
-        <p class="tags"><b style="color: black;">Tags: </b><b> Male, Comedy, Dialogue</b></p>
-    </div>
-</div>
-
-
-
-
-
-<hr class="hr3"></hr>
-
-<div class="centered">
-    <p><b>Pages:<b></p>
-    
-    <p><a href="male.html">1</a> <a href="male2.html"> 2</a> <a href="male3.html"> 3</a> <a href="male4.html"> 4</a></p>
-    
-</div>
-
-
-
+<script src="function.js"></script>
     <script>
         function toggleMenu() {
             var menu = document.getElementById('menu');

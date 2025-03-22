@@ -1,6 +1,22 @@
+:root {
+    --primary-bg-color: rgb(255, 255, 255);
+    --secondary-bg-color: #f9f9f9;
+    --primary-text-color: rgb(0, 0, 0);
+    --secondary-text-color: rgb(104, 104, 104);
+    --accent-color: #ffd900;
+    --accent-hover-color: #ff7738;
+    --border-color: #a8a8a8;
+    --line-color: rgba(0, 0, 0, 0.1);
+    --backdrop-color: #d1d1d1;
+    --outline-color: #a7a7a7;
+    --hr-color: #000000; /* Default color for hr elements */
+ 
+}
+
+/* Light Mode */
 body {
     padding: 5px 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--primary-bg-color);
     font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -11,7 +27,7 @@ body {
 
 .faint-line {
     height: 1px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--line-color);
     margin: 20px 0;
 }
 
@@ -27,8 +43,8 @@ body {
     padding: 10px 20px;
     font-size: 13px;
     border-radius: 12px;
-    border: 2px solid #ff7738;
-    background-color: #ffd900;
+    border: 2px solid var(--accent-hover-color);
+    background-color: var(--accent-color);
     font-family: Verdana, Geneva, sans-serif;
     font-weight: 300;
 }
@@ -38,7 +54,7 @@ body {
 }
 
 .button-container button:hover, .single-button button:hover {
-    background-color: #ff7738;
+    background-color: var(--accent-hover-color);
 }
 
 h1 {
@@ -47,15 +63,9 @@ h1 {
     position: relative;
 }
 
-h2 {
+h2, h3 {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 16px;
-}
-
-h3 {
-    margin-bottom: 30px;
-    margin-top: 30px;
     font-size: 16px;
 }
 
@@ -65,8 +75,9 @@ hr {
     margin-bottom: 0.5em;
     margin-left: 40em;
     margin-right: 40em;
-    border-width: 1px;
-    color: #000000;
+    border-width: 0.5px; /* Make the line thinner */
+    /* border-color: var(--hr-color); 
+    background-color: var(--hr-color);  */
 }
 
 .hr2 {
@@ -75,8 +86,9 @@ hr {
     margin-bottom: 0.5em;
     margin-left: 2em;
     margin-right: 2em;
-    border-width: 1px;
-    color: #000000;
+    border-width: 0.5px; /* Make the line thinner */
+    /* border-color: var(--hr-color); 
+    background-color: var(--hr-color);  */
 }
 
 .hr3 {
@@ -85,8 +97,9 @@ hr {
     margin-bottom: 2em;
     margin-left: 1em;
     margin-right: 1em;
-    border-width: 1px;
-    color: #000000;
+    border-width: 0.5px; /* Make the line thinner */
+    /* border-color: var(--hr-color);
+    background-color: var(--hr-color);  */
     width: 15%;
     margin-left: auto;
     margin-right: auto;
@@ -99,7 +112,7 @@ hr {
     left: 35%;
     top: 5%;
     transform: translateX(-50%);
-    background-color: #ffd900;
+    background-color: var(--accent-color);
     width: 80x;
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -111,10 +124,9 @@ hr {
 .menu a {
     display: block;
     text-decoration: none;
-    color: #333;
+    color: var(--primary-text-color);
     padding: 10px;
-    border-bottom: 1px solid #ff7738;
-    border-width: 1px;
+    border-bottom: 1px solid var(--accent-hover-color);
 }
 
 .hamburger {
@@ -124,18 +136,18 @@ hr {
     cursor: pointer;
     width: 40px;
     height: 40px;
-    background-color: #ffd900;
+    background-color: var(--accent-color);
     border-style: solid;
     border-radius: 5px;
     position: absolute;
     top: 20px;
     left: 35%;
     transform: translateX(-50%);
-    border-color: #ff7738;
+    border-color: var(--accent-hover-color);
 }
 
 .hamburger:hover {
-    background-color: #ff7738;
+    background-color: var(--accent-hover-color);
 }
 
 .hamburger span {
@@ -160,12 +172,10 @@ p {
     padding: 5px;
     width: 610px;
     height: 20px;
-    background-color: #d1d1d1;
-    border: 2px solid #a7a7a7;
+    background-color: var(--backdrop-color);
+    border: 2px solid var(--outline-color);
     margin-top: 3%;
     margin-bottom: 1.3%;
-    
-
 }
 
 .update-Backdrop {
@@ -178,8 +188,8 @@ p {
     padding: 5px;
     width: 250px;
     height: 40px;
-    background-color: #ffd900;
-    border: 2px solid #ff7738;
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-hover-color);
     margin-top: 0.8%;
     margin-bottom: 3%;
 }
@@ -188,14 +198,14 @@ p {
     position: relative;
     border-radius: 8px;
     display: block;
-    background-color: #d1d1d1;
+    background-color: var(--backdrop-color);
     padding: 15px;
     width: 260px;
     word-wrap: break-word;
     margin: 10px auto;
     margin-top: 15px;
     text-align: left;
-    outline: 2px solid #a7a7a7;
+    outline: 2px solid var(--outline-color);
     font-size: 14px;
 }
 
@@ -210,7 +220,7 @@ a:hover, a:active {
 }
 
 a {
-    color: rgb(0, 0, 0);
+    color: var(--primary-text-color);
 }
 
 .tags {
@@ -225,13 +235,30 @@ a {
     text-align: left;
     outline: 2px solid #c9c9c9;
     font-size: 13px;
-    color:rgb(104, 104, 104)
+    color: var(--secondary-text-color);
 }
 
+/* 
+.top-Bar {
+    position: relative;
+    border-radius: 8px;
+    display: block;
+    background-color: #e2e2e2;
+    padding: 13px;
+    width: 600px;
+    word-wrap: break-word;
+    margin: 1px auto;
+   
+    outline: 2px solid #c9c9c9;
+  
+    
+} */
+
 .box-container {
-    border: 2px solid #a8a8a8;
+    border: 2px solid var(--border-color);
     padding: 20px;
-    background-color: #f9f9f9;
+    color: black;
+    background-color: var(--secondary-bg-color);
     border-radius: 8px; /* Optional, to make the corners rounded */
     width: 280px;
     margin: 25px auto;
@@ -240,20 +267,19 @@ a {
     justify-content: center; /* Vertically center the content */
     align-items: center; /* Horizontally center the content */
     text-align: center; /* Center text within the div */
-    
 }
 
 .button-container2 {
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
-    gap: 4px; 
+    gap: 4px;
     justify-content: center;
 }
 
 .filter-button {
-    background-color: #ffd900;
+    background-color: var(--accent-color);
     border: 2px solid rgb(255, 136, 0);
-    color: rgb(0, 0, 0);
+    color: var(--primary-text-color);
     padding: 2px;
     text-align: center;
     text-decoration: none;
@@ -264,20 +290,18 @@ a {
     white-space: nowrap; /* Prevents the text from wrapping to a new line */
     padding: 5px 10px; /* Adjust padding for better appearance */
     border-radius: 4px;
-    
 }
 
 .filter-button:hover {
     background-color: rgb(255, 136, 0);
     border: 2px solid rgb(255, 136, 0);
-    color: rgb(0, 0, 0);
+    color: var(--primary-text-color);
 }
 
-
 .button-container3 {
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
-    gap: 4px; 
+    gap: 4px;
     justify-content: center;
 }
 
@@ -291,12 +315,146 @@ a {
     padding: 5px;
     width: 500px;
     height: 150px;
-    background-color: #f9f9f9;
-    border: 2px solid #a8a8a8;
+    background-color: var(--secondary-bg-color);
+    border: 2px solid var(--border-color);
     margin-top: 1%;
     margin-bottom: 1.3%;
-    
+}
 
+.box-title {
+    color: rgb(0, 0, 0);
+
+}
+
+
+
+/* Light Mode (Default) */
+.pages {
+    text-align: center;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0); /* Default to black text in light mode */
+}
+
+.pages p {
+    color: rgb(0, 0, 0); /* Black text in light mode */
+}
+
+.pages a {
+    color: rgb(0, 0, 0); /* Black links in light mode */
+}
+
+.pages a.active {
+    color: #ff7738; /* Black links in light mode */
+}
+
+.pages a:hover {
+    color: #ff7738; /* White color on hover */
+}
+
+.tag-title {
+
+    color: #000000;
+
+}
+
+.switchIcon {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 35%;
+    transform: translateX(50%);
+    width: 100%
+
+   
+
+
+}
+
+
+
+
+
+
+/* DARK MODE */
+
+
+
+
+
+/* Dark Mode */
+body.dark-mode {
+    --primary-bg-color: rgb(54, 54, 58);
+    --secondary-bg-color: #343235;
+    --third-text-color: rgb(255, 255, 255);
+    --color: #faf8fc;
+    --global-text-color: rgb(255, 255, 255); /* Global text color for dark mode */
+    --hr-color: #000000;
+    --border-color: #202020;
+    --line-color: rgba(0, 0, 0, 0.1);
+    --accent-color: #ffc400;
+    --accent-hover-color: #ff7738;
+}
+
+/* Apply the text color based on the mode */
+body.dark-mode .pages {
+    color: var(--global-text-color); /* Use white text in dark mode */
+}
+
+body.dark-mode .pages p {
+    color: var(--global-text-color); /* White text in dark mode */
+}
+
+body.dark-mode .pages a {
+    color: var(--global-text-color); /* White links in dark mode */
+}
+
+body.dark-mode .pages a:hover {
+    color: #ffd900;
+}
+
+/* Optional: Additional styles for other parts of dark mode */
+body.dark-mode hr {
+    border-width: 0.5px;
+    border-color: var(--hr-color);
+    background-color: var(--hr-color);
+    color: var(--hr-color);
+}
+
+.pages a.active {
+    color: #ff7738; /* Black links in light mode */
+}
+
+.animation-title {
+    color: black;
+}
+
+body.dark-mode .animation-title {
+    color: #d1d1d1; /* Light color for animation title in dark mode */
+}
+
+body.dark-mode .box-title {
+    color:  #d1d1d1; /* White text for box titles in dark mode */
+}
+
+
+body.dark-mode .tag-title {
+
+    color: #d1d1d1;
+
+}
+
+body.dark-mode .filter-button:hover {
+    background-color: #ff7738;
+    border: 2px solid #ff7738;
+}
+
+body.dark-mode .filter-button {
+    background-color: #ffc400;
+    border: 2px solid #ff7738;
 }
 
 

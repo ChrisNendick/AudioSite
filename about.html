@@ -247,17 +247,20 @@
         a:hover, a:active {
             text-decoration: none;
             color: rgb(255, 136, 0); /* The color you want on hover or active state */
+            
         }
 
         
         a {
             color: rgb(0, 0, 0); /* Replace with the normal link color of your choice */
         }
+
+
     </style>
 </head>
 
 
-
+<link rel="stylesheet" href="styles.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WZ10P9V71H"></script>
 <script>
@@ -279,6 +282,9 @@
     <span style="color: rgb(0, 0, 0);">&#9776;</span> <!-- Hamburger icon inside a span -->
 </button>
 
+<img src="moon.png" id="mode-toggle" alt="Button Image" style="width: 60px; height: 60px;" class="switchIcon">
+
+
 <!-- Dropdown menu -->
 <ul class="menu" id="menu">
     <li><a href="index.html">Home</a></li>
@@ -287,61 +293,62 @@
     <li><a href="prompts.html">Prompts</a></li>
 </ul>
 <div class="centered">
-    <img src="iconicon.png" alt="icon">
+    <img  id="top-image" src="iconicon.png" alt="Top Image">
     <hr>
 </div>
-<center><b><p style="font-size: 15px; margin-bottom: 10px; margin-top: 10px;" >🎤 Animation Audios for all! 🎧</p></b></center>
+<center><b><p style="font-size: 15px; margin-bottom: 10px; margin-top: 10px;" class="animation-title" >🎤 Animation Audios for all! 🎧</p></b></center>
 <center><b><p style="margin-bottom: 30px;" class="update-Backdrop">New Audio Every Friday!</p></b></center>
 
 <center><p class="donation-Backdrop" style="font-size: 14px; margin-top: -10px;"> <b style="color: rgba(0, 0, 0, 0.7);">🖤</b> Make sure to <b>bookmark</b> this page and <b><a href="https://ko-fi.com/animaudios" target="_blank">buy me a coffee</a></b> to keep the site ad-free</p></center>
 
 <hr>
 
+
 <!-- Backdrop around paragraphs, stacked vertically -->
-<div >
+<div class="tag-title">
     <p>What is the purpose of this site?</p>
 </div>
-<div class="paragraph-backdrop">
+<div class="paragraph-backdrop" style="width: 590px; outline: 0px solid var(--outline-color); font-size: 15.5px; margin: 5px auto; margin-top: 5px;">
     <p>This website was created to help animators easily find unique audio samples for practicing character animation. I've personally had issues in the past trying to find audio clips to work with and I know many others do too, so I made this site to fix that issue.</p>
 </div>
 
-<div >
+<div class="tag-title" >
     <p>Is this Safe?</p>
 </div>
 
-<div class="paragraph-backdrop">
+<div class="paragraph-backdrop" style="width: 590px; outline: 0px solid var(--outline-color); font-size: 15.5px; margin: 5px auto; margin-top: 5px;">
     <p>Yes! This site is completely safe. No malware, viruses, or malicious files.. just MP4s and WAV's. There's also no ads to avoid any disruptions. </p>
 </div>
 
-<div >
+<div class="tag-title" >
     <p>How do I download audio?</p>
 </div>
 
-<div class="paragraph-backdrop">
+<div class="paragraph-backdrop" style="width: 590px; outline: 0px solid var(--outline-color); font-size: 15.5px; margin: 5px auto; margin-top: 5px;">
     <p>There should be 3 dots next to the mp3 player on the home page. Click the dots and press download.</p>
 </div>
 
 
-<div>
+<div class="tag-title" >
     <p>Does this work on Mobile?</p>
 </div>
 
-<div class="paragraph-backdrop">
+<div  class="paragraph-backdrop" style="width: 590px; outline: 0px solid var(--outline-color); font-size: 15.5px; margin: 5px auto; margin-top: 5px;">
     <p>As of now, you can still access the audio player on mobile, but you cannot directly download from it. </p>
 </div>
 
 
 
-<div>
+<div class="tag-title">
     <p>How can I support this site?</p>
 </div>
 
 
-<div class="paragraph-backdrop">
+<div class="paragraph-backdrop" style="width: 590px; outline: 0px solid var(--outline-color); font-size: 15.5px; margin: 5px auto; margin-top: 5px;">
     <p>I have a Ko-Fi linked at the top of the page if you wanna donate! Donations will help keep the site ad-free and alive! </p>
 </div>
 
-
+<script src="function.js"></script>
 <script>
     function toggleMenu() {
         var menu = document.getElementById('menu');
