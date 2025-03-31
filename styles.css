@@ -9,11 +9,9 @@
     --line-color: rgba(0, 0, 0, 0.1);
     --backdrop-color: #d1d1d1;
     --outline-color: #a7a7a7;
-    --hr-color: #000000; /* Default color for hr elements */
- 
+    --hr-color: #000000;
 }
 
-/* Light Mode */
 body {
     padding: 5px 10px;
     background-color: var(--primary-bg-color);
@@ -75,9 +73,7 @@ hr {
     margin-bottom: 0.5em;
     margin-left: 40em;
     margin-right: 40em;
-    border-width: 0.5px; /* Make the line thinner */
-    /* border-color: var(--hr-color); 
-    background-color: var(--hr-color);  */
+    border-width: 0.5px;
 }
 
 .hr2 {
@@ -86,9 +82,7 @@ hr {
     margin-bottom: 0.5em;
     margin-left: 2em;
     margin-right: 2em;
-    border-width: 0.5px; /* Make the line thinner */
-    /* border-color: var(--hr-color); 
-    background-color: var(--hr-color);  */
+    border-width: 0.5px;
 }
 
 .hr3 {
@@ -97,9 +91,7 @@ hr {
     margin-bottom: 2em;
     margin-left: 1em;
     margin-right: 1em;
-    border-width: 0.5px; /* Make the line thinner */
-    /* border-color: var(--hr-color);
-    background-color: var(--hr-color);  */
+    border-width: 0.5px;
     width: 15%;
     margin-left: auto;
     margin-right: auto;
@@ -238,35 +230,19 @@ a {
     color: var(--secondary-text-color);
 }
 
-/* 
-.top-Bar {
-    position: relative;
-    border-radius: 8px;
-    display: block;
-    background-color: #e2e2e2;
-    padding: 13px;
-    width: 600px;
-    word-wrap: break-word;
-    margin: 1px auto;
-   
-    outline: 2px solid #c9c9c9;
-  
-    
-} */
-
 .box-container {
     border: 2px solid var(--border-color);
     padding: 20px;
     color: black;
     background-color: var(--secondary-bg-color);
-    border-radius: 8px; /* Optional, to make the corners rounded */
+    border-radius: 8px;
     width: 280px;
     margin: 25px auto;
-    display: flex; /* Flexbox to center the content */
-    flex-direction: column; /* Stack the children vertically */
-    justify-content: center; /* Vertically center the content */
-    align-items: center; /* Horizontally center the content */
-    text-align: center; /* Center text within the div */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .button-container2 {
@@ -286,9 +262,9 @@ a {
     display: inline-block;
     font-size: 13px;
     margin: 2px 2px;
-    min-width: 60px; /* This allows the button to expand if the text is longer */
-    white-space: nowrap; /* Prevents the text from wrapping to a new line */
-    padding: 5px 10px; /* Adjust padding for better appearance */
+    min-width: 60px;
+    white-space: nowrap;
+    padding: 5px 10px;
     border-radius: 4px;
 }
 
@@ -323,42 +299,35 @@ a {
 
 .box-title {
     color: rgb(0, 0, 0);
-
 }
 
-
-
-/* Light Mode (Default) */
 .pages {
     text-align: center;
     margin-bottom: 5px;
-    color: rgb(0, 0, 0); /* Default to black text in light mode */
+    color: rgb(0, 0, 0);
 }
 
 .pages p {
-    color: rgb(0, 0, 0); /* Black text in light mode */
+    color: rgb(0, 0, 0);
 }
 
 .pages a {
-    color: rgb(0, 0, 0); /* Black links in light mode */
+    color: rgb(0, 0, 0);
 }
 
 .pages a.active {
-    color: #ff7738; /* Black links in light mode */
+    color: #ff7738;
 }
 
 .pages a:hover {
-    color: #ff7738; /* White color on hover */
+    color: #ff7738;
 }
 
 .tag-title {
-
     color: #000000;
-
 }
 
 .switchIcon {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -367,31 +336,15 @@ a {
     top: 10px;
     right: 35%;
     transform: translateX(50%);
-    width: 100%
-
-   
-
-
+    width: 100%;
 }
 
-
-
-
-
-
-/* DARK MODE */
-
-
-
-
-
-/* Dark Mode */
 body.dark-mode {
     --primary-bg-color: rgb(54, 54, 58);
     --secondary-bg-color: #343235;
     --third-text-color: rgb(255, 255, 255);
     --color: #faf8fc;
-    --global-text-color: rgb(255, 255, 255); /* Global text color for dark mode */
+    --global-text-color: rgb(255, 255, 255);
     --hr-color: #000000;
     --border-color: #202020;
     --line-color: rgba(0, 0, 0, 0.1);
@@ -399,24 +352,22 @@ body.dark-mode {
     --accent-hover-color: #ff7738;
 }
 
-/* Apply the text color based on the mode */
 body.dark-mode .pages {
-    color: var(--global-text-color); /* Use white text in dark mode */
+    color: var(--global-text-color);
 }
 
 body.dark-mode .pages p {
-    color: var(--global-text-color); /* White text in dark mode */
+    color: var(--global-text-color);
 }
 
 body.dark-mode .pages a {
-    color: var(--global-text-color); /* White links in dark mode */
+    color: var(--global-text-color);
 }
 
 body.dark-mode .pages a:hover {
     color: #ffd900;
 }
 
-/* Optional: Additional styles for other parts of dark mode */
 body.dark-mode hr {
     border-width: 0.5px;
     border-color: var(--hr-color);
@@ -425,7 +376,7 @@ body.dark-mode hr {
 }
 
 .pages a.active {
-    color: #ff7738; /* Black links in light mode */
+    color: #ff7738;
 }
 
 .animation-title {
@@ -433,18 +384,15 @@ body.dark-mode hr {
 }
 
 body.dark-mode .animation-title {
-    color: #d1d1d1; /* Light color for animation title in dark mode */
+    color: #d1d1d1;
 }
 
 body.dark-mode .box-title {
-    color:  #d1d1d1; /* White text for box titles in dark mode */
+    color:  #d1d1d1;
 }
 
-
 body.dark-mode .tag-title {
-
     color: #d1d1d1;
-
 }
 
 body.dark-mode .filter-button:hover {
@@ -456,5 +404,3 @@ body.dark-mode .filter-button {
     background-color: #ffc400;
     border: 2px solid #ff7738;
 }
-
-
