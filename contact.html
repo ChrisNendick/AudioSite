@@ -7,8 +7,10 @@
         body {
             padding: 5px 10px;
             background-color: #ffffff;
-            overflow: none; 
+           
             font-family: Verdana, Geneva, sans-serif; /* Set the font to Verdana, with Geneva and sans-serif as fallbacks */
+            overflow-y: scroll; 
+            overflow-x: none; 
         }
 
         .centered {
@@ -203,8 +205,34 @@
 
         
         a {
-            color: rgb(0, 0, 0); /* Replace with the normal link color of your choice */
+            color: rgb(0, 0, 0); 
         }
+
+
+        input,
+        textarea {
+        border: 1px solid #797979;
+        border-radius: 4px;   
+        padding: 8px;           
+        font-family: inherit;  
+        font-size: 1rem;
+        box-sizing: border-box;
+        display: inline-block;  
+        margin-right: 10px;    
+        }
+
+        .audio-request-box {
+        background-color: #ececec; 
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+        border-style: solid;  
+        max-width: 350px; 
+        border-width: 1px;
+        border-color: rgb(139, 139, 139);
+
+
+}
 
 
 
@@ -253,14 +281,42 @@
 <div class="centered">
     <img id = "top-image" src="iconicon.png" alt="icon">
     <hr>
-    <b><p  class="tag-title">✉️ Contact ✉️</p></b>
-    <p  class="tag-title">Use <a href="https://docs.google.com/forms/d/e/1FAIpQLSfeoTXKxB8Or7fieJRbSXPo4jfvKKsNheb3UinHF5TviYwmLw/viewform?usp=header" target="_blank" >this</a> form to contact me and make suggestions</p>
+    
 
-   <center> <hr class="hr2"></center>
-<div>
-    <b ><p  class="tag-title">🎵 Audio Requests 🎵</p></b>
-    <p  class="tag-title">Use <a href="https://forms.gle/oSDcSYcHdjt4RdsGA" target="_blank" >this</a> form to make audio requests!</p>
+
+
+
+
+<div class="form">
+   <center> <b><p  class="tag-title">✉️ Contact ✉️</p></b></center>
+    <form action="https://formsubmit.co/animaudios@gmail.com" method="POST" style="display: flex; flex-direction: column; max-width: 400px; margin: 0 auto;">
+        <input type="text" name="name" required placeholder="Name" 
+            style="margin-bottom: 15px; padding: 10px; font-size: 16px; background-color: #ececec;">
+        
+        <input type="email" name="email" required placeholder="Email" 
+            style="margin-bottom: 15px; padding: 10px; font-size: 16px; background-color: #ececec;">
+        
+        <input type="text" name="subject" required placeholder="Subject" 
+            style="margin-bottom: 15px; padding: 10px; font-size: 16px; background-color: #ececec;">
+        
+        <textarea name="message" required placeholder="Message" 
+            style="margin-bottom: 15px; padding: 10px; font-size: 16px; resize: vertical; min-height: 100px;  font-family: inherit; background-color: #ececec;"></textarea>
+        
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit" 
+            style="padding: 10px; font-size: 16px; background-color: #ffd900; color: rgb(0, 0, 0); cursor: pointer; border-radius: 5px; border-color: #ff7738;" > 
+            Submit
+        </button>
+    </form>
 </div>
+
+<center><hr class="hr2" style="margin-top: 40px"></hr></center>
+
+<div class="audio-request-box">
+    
+    <b><p >🎵 Audio Requests 🎵</p></b>
+    <p >Use <a href="https://forms.gle/oSDcSYcHdjt4RdsGA" target="_blank" >this</a> form to make audio requests!</p>
 </div>
 
 
